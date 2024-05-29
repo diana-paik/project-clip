@@ -4,6 +4,7 @@ import { Calendar, Views, momentLocalizer } from "react-big-calendar";
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { CalendarToolbar } from "../CalendarToolbar/CalendarToolbar";
+import style from "./MyCalendar.module.css";
 
 export function MyCalendar({ calendarState, selectedDate, onSelectDate }:any) {
     moment.locale('ko-KR');
@@ -28,7 +29,7 @@ export function MyCalendar({ calendarState, selectedDate, onSelectDate }:any) {
         setCalendarView(calendarState) // 2) calendarView에 불러온 값 담기
     }, [calendarState]) // calendarState가 변경될 때 동작
     return (
-        <div style={{ height: 500 }}>
+        <div className={style["main_content"]}>
             <Calendar
                 defaultDate={today} // 오늘 날짜(상위 컴포넌트에서 받아옴)
                 localizer={localizer}

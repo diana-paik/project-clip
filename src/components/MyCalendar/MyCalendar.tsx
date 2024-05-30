@@ -29,14 +29,14 @@ export function MyCalendar({ calendarState, selectedDate, onSelectDate }:any) {
         setCalendarView(calendarState) // 2) calendarView에 불러온 값 담기
     }, [calendarState]) // calendarState가 변경될 때 동작
     return (
-        <div className={style["main_content"]}>
+        <div className={style["my_calendar"]}>
             <Calendar
                 defaultDate={today} // 오늘 날짜(상위 컴포넌트에서 받아옴)
                 localizer={localizer}
                 events={events}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ margin: 20 }}
+                style={{ margin: 30 }}
                 onSelectSlot={(slotInfo) => handleDateSelect(slotInfo.start)}
                 view={calendarView} // view 속성
                 components={{

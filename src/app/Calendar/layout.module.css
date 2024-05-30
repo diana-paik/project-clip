@@ -11,14 +11,11 @@
 
 .main_nav_content{
   display: flex;
-  /* justify-content: start; */
   width: 30rem;
-  /* flex-grow: 1; */
 }
 
 .main_content {
   display: flex;
-  /* justify-content: center; */
   width: auto;
 }
 
